@@ -4,22 +4,17 @@
 
 using System;
 
-class PrintSequence
+class LongSequence
 {
     static void Main()
     {
         int start = 2;
         int count = 1000;
 
-        for (int i = start; i < (start + count); i++)
+        for (int i = start; i < (start + count); i+=2)
         {
-            int temp = (i % 2 == 1) ? i * (-1) : i;
-            Console.Write(temp);
-            if (i < (start + count) - 1)
-            {
-                Console.Write(", ");
-            }
+            Console.Write("{0}, {1}, ", i, ~(i));
         }
-        Console.WriteLine();
+        Console.WriteLine("\b\b ");
     }
 }
